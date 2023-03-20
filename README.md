@@ -22,7 +22,8 @@
 10. Configure your firewall: Make sure to configure your firewall to allow traffic to your application. For example, if you are using Nginx, you can configure your firewall to allow traffic on port 80.
 
 
-**Create and configure a new Linux user on the Droplet (Security best practice).**
+### Create and configure a new Linux user on the Droplet (Security best practice).
+***
 
 Creating a new Linux user on your DigitalOcean droplet is a security best practice. Here are the steps to follow:
 
@@ -56,6 +57,32 @@ Replace "username" with the username you created in step 2.
 That's it! You have now created and configured a new Linux user on your DigitalOcean droplet following security best practices.
 
 
-Deploy and run a Java Gradle application on Droplet.
+### Deploy and run a Java Gradle application on Droplet.
+***
+
++ In order to run Java grade application on remote Server, we will first build the jar file locally and then from there we will copy the jar file to our remote server.
+
++ For that we will take an example of [java react project](https://github.com/nanuchi/java-react-example).
+
++ Clone the java react project locally. Upon cloning, inside the project root folder we are going to execute the gradle build command which is given below:-
+
+  `./gradlew build`
+
++ Execute below command to copy .jar file from locally to the remote server.
+
+  `scp build/libs/java-react-example.jar root@ipaddress:/root`
+
++ Once you execute the above command, login to remote sever and we will be able to see the .jar file present in the /root directory.
+
++ In order to run the aplication, execute to below command:-
+
+  `java -jar java-react-example.jar`
+
++ Voila! Our application has now started.
 
 Technologies used:-DigitalOcean, Linux, Java, Gradle.
+
+Related Project
+
++ [Java-react-example
+](https://github.com/nanuchi/java-react-example)
