@@ -1,4 +1,4 @@
-## Project: Create server and deploy application on DigitalOcean.
+## Project:- Create server and deploy application on DigitalOcean.
 **Setup and configure a server on DigitalOcean.**
 
 1. Create a DigitalOcean account: Go to the DigitalOcean website (https://www.digitalocean.com/) and create an account. You will need to provide your name, email address, and a password.
